@@ -105,3 +105,8 @@ page_table_DF = pd.DataFrame(page_table_holder)
 
 #prints to a csv without headers and indexes
 page_table_DF.to_csv('new.csv', encoding='utf-8', header=False, index=False)
+
+#prints an archive version of the current csv
+timestamp = time.strftime("%Y%m%d")
+time_filename = timestamp + "tempact" + ".csv"
+page_table_DF.to_csv(time_filename, encoding='utf-8', header=False, index=False)
