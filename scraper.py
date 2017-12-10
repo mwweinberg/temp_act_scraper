@@ -55,7 +55,7 @@ counter = 1
 #*******************
 #*******************
 #one more than the number of pages
-max_page = 3
+max_page = 50
 
 ###
 while counter < int(max_page):
@@ -73,8 +73,12 @@ while counter < int(max_page):
         td_holder = tr_holder[0].find_all("td")
 
         current_start_bianhao = td_holder[0].get_text()
+	
+	if counter == 1:
+	    max_bianhao = int(current_start_bianhao)
+	    print "max_bianhao is: " + str(max_bianhao)
 
-        if current_start_bianhao == str( (counter-1)*10 + 1):
+        if current_start_bianhao == str( max_bianhao - (counter-1)*10):
             attempts = 20
             print "Confirmed new Bianhao, moving along"
             for tr_item in tr_holder:
