@@ -1,4 +1,7 @@
 # temp_act_scraper
+
+Use the superscraper.py.  We combined temp-act-reconcile 9https://github.com/mwweinberg/temp-act-reconcile) into the old scraper, thus  making it super.
+
 A script to scrape the registration websites for foreign NGOs registered for temporary activities in China
 
 
