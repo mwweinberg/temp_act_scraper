@@ -118,7 +118,7 @@ page_table_DF.to_csv('new.csv', encoding='utf-8', header=False, index=False)
 
 #prints an archive version of the current csv
 timestamp = time.strftime("%Y%m%d")
-time_filename = timestamp + "tempact" + ".csv"
+time_filename = "tempactMPS" + timestamp + ".csv"
 page_table_DF.to_csv(time_filename, encoding='utf-8', header=False, index=False)
 
 #begin what used to be reconcile
@@ -175,6 +175,6 @@ for element in output_csv_list:
     element.insert(13, first_date_fixed)
 
 #output to CSV
-with open('output.csv', 'w') as f:
+with open('tempactdiffs.csv', 'w') as f:
     writer = csv.writer(f)
     writer.writerows(output_csv_list)
